@@ -19,6 +19,7 @@ describe('AlertsCtrl', function() {
         
           expect($scope.AlertsCtrl()).toHaveBeenCalled();
 
+
 		  });
 
 

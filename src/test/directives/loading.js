@@ -2,13 +2,16 @@
 
 describe('loading', function() {
 		 
-      beforeEach(module('teamform'));
-      var $scope, controller;
-      beforeEach(inject(function($controller, $rootScope){
-          $scope = $rootScope.$new();
-          controller = $controller('rdLoading',{$scope:$scope});
-      
-      }));
+      beforeEach(function(){
+        module('teamform');
+  
+        inject(function($compile, $rootScope){
+        compile = $compile;
+        scope = $rootScope.$new();
+        });
+  
+        directiveElem = getCompiledElement();
+      });
 
 	  	  
 		  it('rdLoading', function() {
@@ -19,4 +22,4 @@ describe('loading', function() {
 
 
 
-});
+};
